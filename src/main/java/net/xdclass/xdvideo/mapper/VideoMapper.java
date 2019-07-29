@@ -18,7 +18,6 @@ public interface VideoMapper {
 //    @Select("select * from video")
 //    List<Video> findAll();
 
-
     @Select("select * from video")
       @Results({
                 @Result(column = "cover_img",property =
@@ -28,16 +27,15 @@ public interface VideoMapper {
       })
     //字段映射
     List<Video> findAll();
-
     @Select("SELECT * FROM video WHERE id = #{id}")
     Video findById(int id);
+
     @Update("UPDATE video SET title=#{title} WHERE id =#{id}")
    // @UpdateProvider(type = VideoProvider.class,method = "updateVideo")
     int update(Video Video);
 
     @Delete("DELETE FROM video WHERE id =#{id}")
     int delete(int id);
-
     @Insert("INSERT INTO `video` ( `title`, `summary`, " +
             "`cover_img`, `view_num`, `price`, `create_time`," +
             " `online`, `point`)" +

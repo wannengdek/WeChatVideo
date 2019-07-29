@@ -2,10 +2,12 @@ package net.xdclass.xdvideo.domain;
 
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 视频表
  */
+
 public class Video implements Serializable {
 
   private Integer id;
@@ -17,7 +19,6 @@ public class Video implements Serializable {
   private java.util.Date createTime;
   private Integer online;
   private Double point;
-
 
   public Integer getId() {
     return id;

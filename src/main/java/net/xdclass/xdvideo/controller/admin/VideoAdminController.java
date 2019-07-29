@@ -2,6 +2,7 @@ package net.xdclass.xdvideo.controller.admin;
 
 import net.xdclass.xdvideo.domain.Video;
 import net.xdclass.xdvideo.service.VideoService;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -34,7 +35,7 @@ public class VideoAdminController {
      * @return
      */
     @PutMapping("update_by_id")
-    public Object update(@RequestBody Video video){
+    public Object update(@RequestBody (required = true)Video video){
 
 
         return videoService.update(video);

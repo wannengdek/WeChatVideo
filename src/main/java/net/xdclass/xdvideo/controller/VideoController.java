@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 
-@RequestMapping("/avi/v1/video")
+@RequestMapping("/api/v1/video")
 public class VideoController {
 
 
@@ -38,6 +38,10 @@ public class VideoController {
 		data.put("current_page",page);//当前页
 		data.put("data",pageInfo.getList());//数据
 		return data;
+	}
+	@PutMapping("update_by_id")
+	public @ResponseBody Object update(@RequestBody (required = true)Video video){
+		return videoService.update(video);
 	}
 
 

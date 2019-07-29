@@ -23,7 +23,6 @@ public class VideoServiceImpl implements VideoService {
     public List<Video> findAll() {
         return videoMapper.findAll();
     }
-
     @Override
     public Video findById(int id) {
         return videoMapper.findById(id);
